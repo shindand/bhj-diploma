@@ -9,7 +9,10 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static list(data, callback){
-
+    Entity.list( data, function( err, response ) {
+      // эта функция работает аналогично callback в createRequest
+      console.log(err, response);
+    });
   }
 
   /**
@@ -18,7 +21,9 @@ class Entity {
    * что наследуется от Entity)
    * */
   static create(data, callback) {
-
+    static create( data, callback ) {
+      console.log( data ); // { mail: 'ivan@biz.pro' }
+    }
   }
 
   /**
