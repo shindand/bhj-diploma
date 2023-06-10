@@ -36,6 +36,9 @@ class Modal {
    * со значением «block»
    * */
   open() {
+    console.log('777');
+    const element = App.getModal('.modal-register');
+    element.style.dilplay='block';
 
   }
   /**
